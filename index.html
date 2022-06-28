@@ -5,18 +5,30 @@
   <title>GTM test</title>
   <!-- Google Tag Manager -->
   <script>
-      dataLayer = [
-		    {
-		      'gtm.what': new Date().getTime(),
-          event: 'fefefe',
-			  }
-      ];
+    dataLayer = [
+      {
+        'gtm.what': new Date().getTime(),
+        event: 'fefefe',
+      }
+    ];
 
+	  setTimeout(() => {
+		  dataLayer.push({
+          fe: 11,
+          pe: 12,
+          trtrtr: 123,
+      })
+    }, 1000)
+
+    setTimeout(() => {
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-	  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-	  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-MF586XJ');
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-MF586XJ');
+    }, 2000);
+
+
 
 
   </script>
